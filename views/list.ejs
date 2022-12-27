@@ -5,7 +5,19 @@
     <title>To Do List</title>
   </head>
   <body>
-    <h1>It's a <%=day%>!</h1>
+    <h1><%=day%></h1>
+
+    <% var len = items.length %>
+    <% for (var i =0; i < len;  i++ ) { %>
+        <li>
+          <%=items[i]%>
+        </li>
+    <% } %>
+
+    <form action="/" method="post">
+      <input type="text" name="newItem">
+      <button type="submit" name="button">Add</button>
+    </form>
 
   </body>
 </html>
